@@ -1,0 +1,56 @@
+@import "mixins";
+@import "variables";
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  justify-content: center;
+
+  height: 100vh;
+
+  @media screen and (min-width: 750px) {
+    align-items: center;
+  }
+
+  @media screen and (max-width: 749px) {
+    padding-top: 42px;
+  }
+}
+
+.slide, .content {
+  @include container-width;
+}
+
+.slide {
+  display: flex;
+
+  @media screen and (max-width: 749px) {
+    align-self: flex-end;
+  }
+
+  &__img {
+    width: 100%;
+    height: 251px;
+
+    object-fit: contain;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+
+  color: $color-primary;
+}
+
+.description {
+  margin-top: 5px;
+
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: $color-primary;
+}

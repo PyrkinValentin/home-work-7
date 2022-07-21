@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>My APP</title>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="./styles/reset.scss"/>
+	<link rel="stylesheet" href="./styles/common.scss"/>
+	<link rel="stylesheet" href="./styles/buttons.scss"/>
+	<link rel="stylesheet" href="styles/index-page.scss"/>
+</head>
+
+<body>
+<section class="container">
+	<div class="wrapper">
+		<div class="slide">
+			<img class="slide__img" src="assets/img/adventure_map.svg" alt="adventure map">
+		</div>
+		
+		<div class="content">
+			<h1 class="title">Explore the world easily</h1>
+			<p class="description">To your desire</p>
+			
+			<div class="control-slide">
+				<div class="control-slide__indicators">
+					<span class="action"></span>
+					<span></span>
+					<span></span>
+				</div>
+				
+				<button type="button" class="control-slide__next">
+					<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 13L7 7L1 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+				</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	const elNext = document.querySelector('.control-slide__next');
+	const next = () => document.location.href = 'start.html';
+	
+	elNext.addEventListener('click', next);
+</script>
+</body>
+</html>
